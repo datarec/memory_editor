@@ -1,3 +1,6 @@
+// Small program to update data for hexadecimal addresses.
+// ovh.feminine216@passinbox.com
+
 #include <windows.h>
 #include <iostream>
 using namespace std;
@@ -27,9 +30,10 @@ int main() {
     cout << "\nEnter PID: ";
     cin >> pId;
     cout << "Enter memory address: ";
-    cin >> hAddress;
-    cout << "Enter new value for this address: ";
+    scanf("%X", &hAddress);
+    cout << "Enter new value: ";
     cin >> uValue;
+
 
     HANDLE pHandle = OpenProcess(
         PROCESS_VM_OPERATION | PROCESS_VM_WRITE, 

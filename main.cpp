@@ -32,8 +32,6 @@ int main() {
     scanf("%X", &hAddress);
     cout << "Enter new value: ";
     cin >> uValue;
-
-
     HANDLE pHandle = OpenProcess(
         PROCESS_VM_OPERATION | PROCESS_VM_WRITE, 
         FALSE, 

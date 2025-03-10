@@ -5,7 +5,6 @@
 #include <iostream>
 using namespace std;
 
-
 int writeMemory(HANDLE pHandle, DWORD hAddress, DWORD uValue) {
     BOOL wMem =  WriteProcessMemory(
         (HANDLE)pHandle,

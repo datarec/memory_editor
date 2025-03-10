@@ -6,7 +6,7 @@
 using namespace std;
 
 
-int writeMemory(HANDLE pHandle, int hAddress, int uValue) {
+int writeMemory(HANDLE pHandle, DWORD hAddress, DWORD uValue) {
     BOOL wMem =  WriteProcessMemory(
         (HANDLE)pHandle,
         (LPVOID)hAddress,
@@ -23,9 +23,9 @@ int writeMemory(HANDLE pHandle, int hAddress, int uValue) {
 }
 
 int main() {
-    int pId;
-    int hAddress; 
-    int uValue;
+    DWORD pId;
+    DWORD hAddress; 
+    DWORD uValue;
 
     cout << "\nEnter PID: ";
     cin >> pId;
